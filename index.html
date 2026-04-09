@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sigmar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -14,18 +15,31 @@
     </header>
     <main>
         <section class="hero">
-          <h2>GROUP CHAT THAT'S ALL FUN & GAMES</h2>
+          <h2>GROUP CHAT <br>
+             THAT'S ALL FUN & <br>
+              GAMES</h2>
             <p>
                 Discord is great for playing games and chilling with friends, or even building a worldwide community. Customize your own space to talk, play, and hang out.
             </p>
             <div class="hero-buttons">
-                <button><span>icon</span>Download for Windows</button>
-                <button>Open Discord in your browser</button>
+                <button id="download">
+                    <span id="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3v12"></path>
+                            <path d="M7 10l5 5 5-5"></path>
+                            <path d="M5 21h14"></path>
+                        </svg>
+                    </span>
+                     <span>
+                    Download for Windows
+                    </span>
+                </button>
+                <button id="browser">Open Discord in your browser</button>
             </div>
         </section>
         <div>
             <section class="card">
-                <img src="assets/img/discord_cube.png" alt="Discord Cube">
+                <img id="discord-cube" src="assets/img/discord_cube.png" alt="Discord Cube">
                 <h2>MAKE YOUR GROUP CHATS MORE FUN</h2>
                 <p>
                     Use custom emoji, stickers, soundboard effects and more to add your personality to your voice, video, or text chat. Set your avatar and a custom status, and write your own profile to show up in chat your way.
@@ -33,7 +47,7 @@
                 <video src="assets/video/video_demo.mp4"></video>
             </section>
             <section class="card">
-                <img src="assets/img/eyes.png" alt="Eyes">
+                <img id="eyes" src="assets/img/eyes.png" alt="Eyes">
                 <h2>MAKE YOUR GROUP CHATS MORE FUN</h2>
                 <p>
                     Use custom emoji, stickers, soundboard effects and more to add your personality to your voice, video, or text chat. Set your avatar and a custom status, and write your own profile to show up in chat your way.

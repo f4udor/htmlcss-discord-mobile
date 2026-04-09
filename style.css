@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+ width: 512px;
+ background-color: #191d7b;
+}
+
+img {
+    width: 100%;
+}
+
+video {
+    width: 100%;
+}
+
+
+h2 {
+    font-family: 'Sigmar', cursive;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hero {
+    padding: 0;
+    padding-top: 112px;
+    text-align: center;
+}
+
+.hero h2 {
+  line-height: 1.1;
+}
+
+.hero p {
+    padding: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.hero-buttons button {
+    display: block;
+    margin: 0 auto 18px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;
+    height: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+#download {
+    background-color: ffffff;
+}
+
+#browser {
+    background-color: #5865f2;
+    color: white;
+}
