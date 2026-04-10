@@ -89,10 +89,18 @@ p {
     border-radius: 25px;
    }
 
-   .sticker {
+   #discord-cube {
     position: absolute;
     top: -50px;
     left: 30px;
+    width: 90px;
+   }
+
+   #eyes {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 90px;
    }
     
