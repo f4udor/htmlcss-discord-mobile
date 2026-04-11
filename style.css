@@ -4,107 +4,155 @@
     box-sizing: border-box;
 }
 
+:root {
+    --page-bg: #1e1f8f;
+    --card-bg: #646ce5;
+    --text: #ffffff;
+    --button-primary: #ffffff;
+    --button-secondary: #5865f2;
+}
+
 body {
- width: 512px;
- background-color: #191d7b;
+    min-width: 320px;
+    background: var(--page-bg);
+    color: var(--text);
 }
 
-img {
-    width: 100%;
-}
-
+img,
 video {
+    display: block;
     width: 100%;
 }
-
 
 h2 {
-    font-family: 'Sigmar', cursive;
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-family: "Sigmar", cursive;
+    color: var(--text);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 0.95;
+    margin-bottom: 0.85rem;
+}
+
+p,
+button {
+    font-family: "DM Sans", sans-serif;
 }
 
 p {
-    font-family: 'DM Sans', sans-serif;
-    color: white;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+header {
+    padding: 0 0 1rem;
+}
+
+.header-inner {
+    max-width: 512px;
+    margin: 0 auto;
+}
+
+.container,
+.cards {
+    width: min(100% - 2rem, 512px);
+    margin: 0 auto;
 }
 
 .hero {
-    padding: 0;
-    padding-top: 112px;
+    padding: 0 0 2.25rem;
     text-align: center;
-}
-
-.hero h2 {
-  line-height: 1.1;
 }
 
 .hero p {
-    padding: 70px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    max-width: 34ch;
+    margin: 0 auto 1.5rem;
 }
 
-.cards {
-     margin-top: 50px;
+.hero-buttons {
+    display: grid;
+    gap: 0.9rem;
 }
 
 .hero-buttons button {
-    display: block;
-    margin: 0 auto 18px;
-    border: none;
-    border-radius: 15px;
-    text-align: center;
-    width: 350px;
-    height: 50px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    width: 100%;
+    min-height: 3.25rem;
+    padding: 0.9rem 1.2rem;
+    border: 0;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 #download {
-    background-color: #ffffff;
+    background: var(--button-primary);
+    color: #111;
 }
 
 #browser {
-    background-color: #5865f2;
-    color: white;
+    background: var(--button-secondary);
+    color: var(--text);
+}
+
+.cards {
+    display: grid;
+    gap: 3rem;
+    padding-bottom: 3rem;
 }
 
 .card {
-    margin: 0 auto 70px;
-    padding: 2em;
-    padding-top: 2em;
-   max-width: 400px;
-   border-radius: 25px;
-   background-color: #5d64d1;
-   position: relative;
-   line-height: 1.1;
-   }
+    position: relative;
+    padding: 3.3rem 1.4rem 1.4rem;
+    border-radius: 1.6rem;
+    background: var(--card-bg);
+    overflow: visible;
+}
 
-   .card video {
-    margin: 0 auto;
-    border-radius: 25px;
-   }
+.card p {
+    margin-bottom: 1.35rem;
+}
 
-   #discord-cube {
+.card video {
+    border-radius: 1.4rem;
+}
+
+#discord-cube,
+#eyes {
     position: absolute;
-    top: -50px;
-    left: 30px;
-    width: 90px;
-   }
+    top: -1.5rem;
+    width: 5.6rem;
+}
 
-   #eyes {
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90px;
-   }
-    
+#discord-cube {
+    left: 1.35rem;
+}
+
+#eyes {
+    left: 1.35rem;
+}
+
 #card2 {
-  background-image: url('assets/img/background.png');
-  background-size: cover;
+    background-image: url("assets/img/background.png");
+    background-position: center;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 0 1.5rem 2rem;
+    }
+
+    .cards {
+        width: min(100%, 960px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+    }
+
+    .hero-buttons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
